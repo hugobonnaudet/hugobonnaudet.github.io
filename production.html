@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Production | Hugo Bonnaudet</title>
+  <!-- Le titre change pour cette page : c'est ce qui s'affiche dans l'onglet du navigateur. -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Même fichier de style que la page d'accueil : toutes les pages ont ainsi la même apparence. -->
+</head>
+
+<body>
+
+  <header>
+    <h1>Hugo Bonnaudet</h1>
+    <p>Étudiant en master de botanique et d'écologie végétale, Université de Montpellier</p>
+  </header>
+
+  <nav>
+    <!-- Ce menu doit être IDENTIQUE dans toutes les pages. -->
+    <ul>
+      <li><a href="index.html">À propos</a></li>
+      <li><a href="production.html">Production</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <article>
+        <!-- <article> : un bloc de contenu indépendant, ici une référence. Copie-colle ce bloc pour en ajouter. -->
+        <h3>Titre de l'article</h3>
+        <!-- <h3> : un titre de niveau 3, sous le <h2>. -->
+        <p>
+          Auteurs, année. <em>Nom de la revue</em>.
+          <a href="https://doi.org/..." target="_blank">DOI</a>
+        </p>
+      </article>
+
+      <p>Aucune publication pour l'instant. Cette section sera complétée au fil du temps.</p>
+      <!-- Tu peux supprimer ce paragraphe dès que tu as une vraie référence. -->
+    </section>
+
+    <section id="communications">
+      <h2>Communications et posters</h2>
+
+      <ul>
+        <li>Titre de la présentation, nom de l'événement, lieu, année.</li>
+        <li>Titre du poster, nom de l'événement, lieu, année.</li>
+      </ul>
+      <!-- Une liste à puces suffit pour des éléments courts. -->
+    </section>
+
+    <section id="rapports">
+      <h2>Rapports et mémoires</h2>
+
+      <ul>
+        <li>
+          Titre du rapport de stage, année.
+          <a href="rapport.pdf" target="_blank">Télécharger (PDF)</a>
+        </li>
+        <!-- Pour proposer un PDF : place le fichier dans le même dossier que cette page
+             et écris son nom exact dans href. -->
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hugo Bonnaudet</p>
+  </footer>
+
+</body>
+</html>
