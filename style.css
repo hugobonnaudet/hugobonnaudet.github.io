@@ -31,8 +31,11 @@ body {
 
 /* ---------- 3. L'en-tête ---------- */
 header {
-  text-align: center;                /* centre le texte */
-  padding: 40px 0 10px 0;            /* espace intérieur : haut, droite, bas, gauche */
+  background-color: var(--vert-fonce);  /* fond vert foncé */
+  color: white;                         /* texte blanc */
+  text-align: center;
+  padding: 40px 20px 30px 20px;
+  border-radius: 0 0 12px 12px;         /* coins arrondis en bas */
 }
 
 h1 {
