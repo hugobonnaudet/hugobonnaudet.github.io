@@ -10,8 +10,8 @@
 /* ---------- 1. Les couleurs, définies une seule fois ---------- */
 /* Ce sont des "variables" : on change une couleur ici, et elle change partout. */
 :root {
-  --vert-fonce: #2d5a3d;
-  --vert-clair: #e8f1ea;
+  --vert-fonce: #127673;
+  --vert-clair: #e8f1f0;
   --texte: #222222;
   --fond: #fafaf7;
 }
@@ -31,17 +31,30 @@ body {
 
 /* ---------- 3. L'en-tête ---------- */
 header {
-  background-color: var(--vert-fonce);  /* fond vert foncé */
-  color: white;                         /* texte blanc */
-  text-align: center;
-  padding: 40px 20px 30px 20px;
-  border-radius: 0 0 12px 12px;         /* coins arrondis en bas */
+  display: flex;                    /* place les éléments côte à côte */
+  justify-content: space-between;   /* un à gauche, l'autre à droite */
+  align-items: center;              /* les centre verticalement */
+  padding: 25px 0;
+  border-bottom: 1px solid var(--vert-fonce);
 }
 
 h1 {
   color: var(--vert-fonce);
-  font-size: 2.4rem;                 /* "rem" : 1rem correspond à la taille de texte normale */
-  margin-bottom: 5px;                /* réduit l'espace sous le titre */
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.sous-titre {
+  font-style: italic;
+  margin-top: 20px;
 }
 
 header p {
