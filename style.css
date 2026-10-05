@@ -1,0 +1,120 @@
+/* Fichier de style : il décrit l'APPARENCE de la page.
+   Le HTML dit ce qu'est chaque élément, le CSS dit comment il s'affiche.
+   Une règle s'écrit toujours ainsi :
+       sélecteur {
+         propriété: valeur;
+       }
+   Le sélecteur désigne les éléments concernés (par exemple "p" pour tous les paragraphes). */
+
+
+/* ---------- 1. Les couleurs, définies une seule fois ---------- */
+/* Ce sont des "variables" : on change une couleur ici, et elle change partout. */
+:root {
+  --vert-fonce: #2d5a3d;
+  --vert-clair: #e8f1ea;
+  --texte: #222222;
+  --fond: #fafaf7;
+}
+
+
+/* ---------- 2. Réglages généraux de la page ---------- */
+body {
+  font-family: Georgia, "Times New Roman", serif; /* la police de caractères */
+  color: var(--texte);               /* var(...) utilise une couleur définie plus haut */
+  background-color: var(--fond);     /* la couleur de fond de la page */
+  line-height: 1.6;                  /* l'espacement entre les lignes (1.6 fois la taille du texte) */
+  max-width: 800px;                  /* la page ne dépasse jamais 800 pixels de large */
+  margin: 0 auto;                    /* 0 en haut et en bas, "auto" à gauche et à droite : ça centre la page */
+  padding: 0 20px;                   /* un espace de 20 pixels sur les côtés, utile sur téléphone */
+}
+
+
+/* ---------- 3. L'en-tête ---------- */
+header {
+  text-align: center;                /* centre le texte */
+  padding: 40px 0 10px 0;            /* espace intérieur : haut, droite, bas, gauche */
+}
+
+h1 {
+  color: var(--vert-fonce);
+  font-size: 2.4rem;                 /* "rem" : 1rem correspond à la taille de texte normale */
+  margin-bottom: 5px;                /* réduit l'espace sous le titre */
+}
+
+header p {
+  font-style: italic;                /* "header p" : seulement les paragraphes DANS le header */
+  margin-top: 0;
+}
+
+
+/* ---------- 4. Le menu de navigation ---------- */
+nav ul {
+  list-style: none;                  /* supprime les puces */
+  padding: 0;
+  display: flex;                     /* met les éléments de la liste côte à côte */
+  justify-content: center;           /* les centre horizontalement */
+  gap: 25px;                         /* l'espace entre chaque lien */
+  border-top: 1px solid var(--vert-fonce);     /* un trait au-dessus du menu */
+  border-bottom: 1px solid var(--vert-fonce);  /* et un trait en dessous */
+  padding: 12px 0;
+}
+
+nav a {
+  text-decoration: none;             /* supprime le soulignement des liens */
+  color: var(--vert-fonce);
+  font-weight: bold;
+}
+
+nav a:hover {                        /* ":hover" : quand la souris passe sur le lien */
+  text-decoration: underline;
+}
+
+
+/* ---------- 5. Les sections ---------- */
+h2 {
+  color: var(--vert-fonce);
+  border-bottom: 2px solid var(--vert-clair);
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+section a {
+  color: var(--vert-fonce);          /* la couleur des liens dans le contenu */
+}
+
+
+/* ---------- 6. La photo ---------- */
+section img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;                 /* recadre la photo sans la déformer */
+  border-radius: 50%;                /* 50% = un cercle parfait */
+  border: 4px solid var(--vert-clair);
+  display: block;
+  margin: 20px auto;                 /* centre la photo */
+}
+
+
+/* ---------- 7. Le pied de page ---------- */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #666666;
+  border-top: 1px solid var(--vert-clair);
+}
+
+
+/* ---------- 8. Adaptation aux petits écrans ---------- */
+/* Cette règle ne s'applique que si l'écran fait moins de 600 pixels de large (téléphone). */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  nav ul {
+    flex-direction: column;          /* le menu passe en colonne */
+    align-items: center;
+    gap: 10px;
+  }
+}
