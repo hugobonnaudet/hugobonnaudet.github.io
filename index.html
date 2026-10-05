@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Cette première ligne dit au navigateur : "ce fichier est une page web en HTML5". -->
+
+<html lang="fr">
+<!-- <html> englobe toute la page. lang="fr" indique que le contenu est en français. -->
+
+<head>
+  <!-- <head> contient des informations sur la page. Rien de ce qui est ici ne s'affiche dans la page elle-même. -->
+
+  <meta charset="UTF-8">
+  <!-- Permet d'afficher correctement les accents (é, è, à, ç...). -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adapte la page à la taille de l'écran (important pour les téléphones). -->
+
+  <title>Hugo Bonnaudet | Écologie végétale</title>
+  <!-- Le titre qui apparaît dans l'onglet du navigateur. -->
+</head>
+
+<body>
+  <!-- <body> contient tout ce qui s'affiche dans la page. -->
+
+  <header>
+    <!-- <header> : l'en-tête de la page (nom, menu). -->
+    <h1>Hugo Bonnaudet</h1>
+    <!-- <h1> : le titre principal. Il n'y en a qu'un seul par page. -->
+
+    <p>Étudiant en master de botanique et d'écologie végétale, Université de Montpellier</p>
+    <!-- <p> : un paragraphe de texte. -->
+  </header>
+
+  <nav>
+    <!-- <nav> : le menu de navigation. -->
+    <ul>
+      <!-- <ul> : une liste à puces. Chaque élément de la liste est un <li>. -->
+      <li><a href="index.html">Accueil</a></li>
+      <!-- <a href="..."> : un lien. Le texte entre les balises est ce que l'on clique. -->
+      <li><a href="#recherche">Recherche</a></li>
+      <!-- Un lien qui commence par # renvoie vers une partie de la même page (voir id="recherche" plus bas). -->
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- <main> : le contenu principal de la page. -->
+
+    <section id="apropos">
+      <!-- <section> : un bloc thématique. id="apropos" lui donne un nom unique. -->
+      <h2>À propos</h2>
+      <!-- <h2> : un titre de niveau 2 (sous-titre). Il existe aussi h3, h4, etc. -->
+
+      <img src="photo.jpg" alt="Portrait de Hugo Bonnaudet" width="200">
+      <!-- <img> : une image. src = le nom du fichier (à placer dans le même dossier que index.html).
+           alt = une description pour les personnes malvoyantes et si l'image ne charge pas.
+           width = la largeur en pixels. Cette balise n'a pas de balise fermante. -->
+
+      <p>
+        Bonjour, je m'appelle Hugo. Je m'intéresse à la dynamique de la végétation
+        et au rôle des traits architecturaux des plantes en écologie fonctionnelle.
+      </p>
+      <!-- Tu peux écrire le texte sur plusieurs lignes : le navigateur ignore les retours à la ligne dans le code. -->
+
+      <p>Ce texte est à remplacer par ta propre présentation.</p>
+    </section>
+
+    <section id="recherche">
+      <h2>Recherche</h2>
+
+      <p>Mes thèmes de recherche :</p>
+      <ul>
+        <li>Dynamique de la végétation à long terme</li>
+        <li>Effet de la fréquence des feux sur les communautés végétales</li>
+        <li>Traits architecturaux et écologie fonctionnelle</li>
+      </ul>
+      <!-- Tu peux ajouter, supprimer ou modifier les <li> pour adapter la liste. -->
+
+      <p>
+        Pour en savoir plus, consulte
+        <a href="https://www.umontpellier.fr" target="_blank">le site de l'université</a>.
+      </p>
+      <!-- target="_blank" ouvre le lien dans un nouvel onglet. -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Tu peux me joindre par e-mail : <strong>prenom.nom@exemple.fr</strong></p>
+      <!-- <strong> met le texte en gras. <em> le met en italique. -->
+    </section>
+  </main>
+
+  <footer>
+    <!-- <footer> : le pied de page. -->
+    <p>&copy; 2026 Hugo Bonnaudet</p>
+    <!-- &copy; est le code du symbole © -->
+  </footer>
+
+</body>
+</html>
